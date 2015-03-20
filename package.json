@@ -5,6 +5,7 @@
   "main": "calculatr.js",
   "scripts": {
     "test": "istanbul cover _mocha -- -R spec",
+    "watch": "istanbul cover _mocha -- -R spec --watch",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "keywords": [
