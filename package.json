@@ -4,7 +4,7 @@
   "description": "Calculator",
   "main": "calculatr.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- -R spec --watch",
+    "test": "istanbul cover _mocha -- -R spec",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "keywords": [
