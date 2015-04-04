@@ -9,7 +9,7 @@ program.version( pkg.version );
 
 program
   .command( 'calc <number1> <operator> <number2>' )
-    .description( 'Sum two numbers' )
+    .description( 'Make a calc' )
     .action( calc );
 
 program.parse( process.argv );
