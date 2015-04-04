@@ -3,13 +3,13 @@
 
 var program = require( 'commander' );
 var pkg = require( './package.json' );
-var sum = require( './lib/calculatr-sum' );
+var calc = require( './lib/calc' );
 
 program.version( pkg.version );
 
 program
-  .command( 'sum <number1> <number2>' )
-    .description( 'Sum two numbers' )
-    .action( sum );
+  .command( 'calc <number1> <operator> <number2>' )
+    .description( 'Make a calc' )
+    .action( calc );
 
 program.parse( process.argv );

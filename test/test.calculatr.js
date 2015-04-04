@@ -14,11 +14,36 @@ describe( 'Calculatr', function() {
     });
   });
 
-  it( 'Command "calculatr sum 1 2" Should return 3', function( done ) {
-    exec( calculatr + ' sum 1 2', function( err, stdout, stderr ) {
+  it( 'Command "calculatr calc 10 + 5" Should return 15', function( done ) {
+    exec( calculatr + ' calc 10 + 5', function( err, stdout, stderr ) {
       if( err ) throw err;
-      Number( stdout ).should.be.equal( 3 );
+      Number( stdout ).should.be.equal( 15 );
       done();
     });
   });
+
+  it( 'Command "calculatr calc 10 - 5" Should return 5', function( done ) {
+    exec( calculatr + ' calc 10 - 5', function( err, stdout, stderr ) {
+      if( err ) throw err;
+      Number( stdout ).should.be.equal( 5 );
+      done();
+    });
+  });
+
+  it( 'Command "calculatr calc 10 * 5" Should return 50', function( done ) {
+    exec( calculatr + ' calc 10 * 5', function( err, stdout, stderr ) {
+      if( err ) throw err;
+      Number( stdout ).should.be.equal( 50 );
+      done();
+    });
+  });
+
+  it( 'Command "calculatr calc 10 / 5" Should return 2', function( done ) {
+    exec( calculatr + ' calc 10 / 5', function( err, stdout, stderr ) {
+      if( err ) throw err;
+      Number( stdout ).should.be.equal( 2 );
+      done();
+    });
+  });
+
 });
